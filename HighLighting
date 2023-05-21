@@ -1,0 +1,10 @@
+local highlight = Instance.new("Highlight")
+highlight.Adornee = -- part here
+
+highlight.Enabled = true
+highlight.FillTransparency = 0.8
+highlight.Parent = game:GetService("CoreGui")
+
+highlight.OutlineColor = Color3.new(0, 0, 1)
+highlight.FillColor = Color3.new(0, 0, 1)
+
