@@ -1,0 +1,2 @@
+local ac = require(game:GetService("ReplicatedStorage").Game.Controllers.PlayerController)
+hookfunction(ac.Fix, function(...) end)
