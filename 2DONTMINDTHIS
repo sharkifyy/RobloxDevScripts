@@ -1,0 +1,12 @@
+-- // __newindex hook (stops game from setting ws/jp)
+local __newindex
+__newindex = hookmetamethod(game, "__newindex", function(t, k, v)
+    -- // Make sure it's trying to set our humanoid's ws/jp
+    if (not checkcaller() and t:IsA("Humanoid") and (k == "WalkSpeed" or k == "JumpPower")) then
+        -- // Disallow the set
+        return
+    end
+
+    -- //
+    return __newindex(t, k, v)
+end)
