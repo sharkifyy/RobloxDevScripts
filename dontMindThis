@@ -1,15 +1,3 @@
 local ac = require(game:GetService("ReplicatedStorage").Game.Controllers.PlayerController)
 hookfunction(ac.Fix, function(...) end) 
 local newindex
-
-
-newindex = hookmetamethod(game, "newindex", function(t, k, v)
-    
-    if (not checkcaller() and t:IsA("Humanoid") and (k == "WalkSpeed" or k == "JumpPower")) then
-        -- // Disallow the set
-        return
-    end
-
-    
-    return __newindex(t, k, v)
-end)
